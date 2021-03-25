@@ -22,7 +22,12 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               ),
               child: ListTile(
                 tileColor: Colors.white30,
-                leading: CircleAvatar(child: Icon(Icons.person)),
+                leading: CircleAvatar(
+                  // if user has uploaded profile picture
+                  backgroundImage: AssetImage('images/user_profile_cover.jpg'),
+                  // if user has not uploaded profile picture yet
+                  child: Icon(Icons.person),
+                ),
                 title: Text('Hello!'),
                 subtitle: Text('Rangan Roy'),
                 trailing: Icon(Icons.arrow_forward),
