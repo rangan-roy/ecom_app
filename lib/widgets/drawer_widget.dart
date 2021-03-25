@@ -12,10 +12,21 @@ class _DrawerWidgetState extends State<DrawerWidget> {
       child: Drawer(
         child: ListView(
           children: [
+            // user's name and image
             Container(
-              color: Colors.red,
-              width: 200,
-              height: 200,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('images/user_profile_cover.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+              child: ListTile(
+                tileColor: Colors.white30,
+                leading: CircleAvatar(child: Icon(Icons.person)),
+                title: Text('Hello!'),
+                subtitle: Text('Rangan Roy'),
+                trailing: Icon(Icons.arrow_forward),
+              ),
             ),
           ],
         ),
