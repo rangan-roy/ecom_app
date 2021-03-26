@@ -30,7 +30,45 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
                 title: Text('Hello!'),
                 subtitle: Text('Rangan Roy'),
-                trailing: Icon(Icons.arrow_forward),
+                trailing: Icon(Icons.arrow_forward_ios),
+              ),
+            ),
+
+            // user's options
+            ListTile(
+              leading: Icon(Icons.book),
+              title: Text('Orders'),
+              trailing: Icon(Icons.arrow_forward_ios),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.star),
+              title: Text('Reviews'),
+              trailing: Icon(Icons.arrow_forward_ios),
+            ),
+            Divider(),
+            ListTile(
+              leading: Icon(Icons.settings),
+              title: Text('Settings'),
+              trailing: Icon(Icons.arrow_forward_ios),
+            ),
+            Divider(),
+
+            // logout button
+            Container(
+              margin: EdgeInsets.only(top: 20),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: TextButton(
+                child: Text('Log Out'),
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(5),
+                      side: BorderSide(color: Theme.of(context).primaryColor),
+                    ),
+                  ),
+                ),
+                onPressed: () {},
               ),
             ),
           ],
