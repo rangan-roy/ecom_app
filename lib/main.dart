@@ -13,6 +13,12 @@ class MyApp extends StatelessWidget {
       title: 'E-commerce App',
       theme: ThemeData(
         primarySwatch: Colors.cyan,
+        textTheme: TextTheme(
+          headline6: TextStyle(
+            fontWeight: FontWeight.w400,
+            wordSpacing: 1,
+          ),
+        ),
       ),
       home: HomePage(),
     );
