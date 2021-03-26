@@ -29,7 +29,7 @@ class CategoryItemWidget extends StatelessWidget {
               width: double.maxFinite,
               color: Colors.white30,
               child: Text(
-                _categoryName,
+                _categoryName.toUpperCase(),
                 style: Theme.of(context).textTheme.subtitle1,
               ),
             ),
