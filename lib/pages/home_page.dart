@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
           buildCategories(context),
 
           // most bought products
-          buildSectionTitle('Most Bought Products', () {}),
+          buildSectionTitle('Most Bought', () {}),
           buildMostBoughtProductItems(),
         ],
       ),
@@ -65,7 +65,7 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white30,
                   child: Text(
                     'T-shirt',
-                    style: Theme.of(context).textTheme.headline6,
+                    style: Theme.of(context).textTheme.subtitle1,
                   ),
                 ),
               ),
@@ -76,25 +76,26 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  Padding buildSectionTitle(String title, Function viewAll) {
+  Container buildSectionTitle(String title, Function viewAll) {
     String firstLetter = title[0];
     String otherLetters = title.substring(1, title.length);
 
-    return Padding(
+    return Container(
       padding: EdgeInsets.symmetric(
         horizontal: 15,
-        vertical: 10,
+        vertical: 5,
       ),
+      color: Colors.grey.shade100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               Text(
-                firstLetter,
+                firstLetter.toUpperCase(),
                 style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline6.
-                    fontSize + 7,
+                    fontSize + 8,
                   fontWeight: Theme.of(context).textTheme.headline6.
                     fontWeight,
                   color: Theme.of(context).primaryColor,
@@ -102,7 +103,7 @@ class _HomePageState extends State<HomePage> {
               ),
               Container(
                 child: Text(
-                  otherLetters,
+                  otherLetters.toUpperCase(),
                   style: Theme.of(context).textTheme.headline6,
                 ),
               ),
