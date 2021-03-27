@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-AppBar buildAppBar(String title) {
+AppBar buildAppBar(String title, BuildContext context) {
   return AppBar(
-    title: Text(title),
+    backgroundColor: Colors.white,
+    elevation: 0,
+    title: Text(
+      title,
+      style: TextStyle(color: Theme.of(context).primaryColor),
+    ),
     actions: [
       // search button
       IconButton(

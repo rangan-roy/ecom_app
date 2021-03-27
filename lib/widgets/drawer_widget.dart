@@ -30,7 +30,6 @@ class _DrawerWidgetState extends State<DrawerWidget> {
                 ),
                 title: Text('Hello!'),
                 subtitle: Text('Rangan Roy'),
-                trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
 
@@ -38,20 +37,49 @@ class _DrawerWidgetState extends State<DrawerWidget> {
             ListTile(
               leading: Icon(Icons.book),
               title: Text('Orders'),
-              trailing: Icon(Icons.arrow_forward_ios),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey.shade300,
+              ),
+              onTap: () {},
             ),
+            
             Divider(),
+
             ListTile(
               leading: Icon(Icons.star),
               title: Text('Reviews'),
-              trailing: Icon(Icons.arrow_forward_ios),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey.shade300,  
+              ),
+              onTap: () {},
             ),
+            
             Divider(),
+
             ListTile(
-              leading: Icon(Icons.settings),
-              title: Text('Settings'),
-              trailing: Icon(Icons.arrow_forward_ios),
+              leading: Icon(Icons.phone),
+              title: Text('Contact'),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey.shade300,
+              ),
+              onTap: () {},
             ),
+            
+            Divider(),
+            
+            ListTile(
+              leading: Icon(Icons.location_on),
+              title: Text('Address'),
+              trailing: Icon(
+                Icons.arrow_forward_ios,
+                color: Colors.grey.shade300,
+              ),
+              onTap: () {},
+            ),
+
             Divider(),
 
             // logout button

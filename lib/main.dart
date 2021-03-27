@@ -12,7 +12,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'E-commerce App',
       theme: ThemeData(
-        primarySwatch: Colors.cyan,
+        primarySwatch: Colors.orange,
+        canvasColor: Colors.white,
         textTheme: TextTheme(
           headline6: TextStyle(
             fontWeight: FontWeight.w400,

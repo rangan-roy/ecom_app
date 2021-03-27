@@ -17,28 +17,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar('E-commerce'),
+      appBar: buildAppBar('E-commerce', context),
       drawer: DrawerWidget(),
       body: ListView(
+        padding: EdgeInsets.symmetric(vertical: 20),
         children: [
           // all category names and images
           CategoryList(),
-
-          // most bought products
-          SectionTitleWidget('Most Bought', () {}),
-          MostBoughtProductsWidget(),
-
-          // top rated products
-          SectionTitleWidget('Top Rated', () {}),
-          TopRatedProductsWidget(),
-
-          // hot deals
-          SectionTitleWidget('Hot Deals', () {}),
-          HotDealsWidget(),
-
-          // new products
-          SectionTitleWidget('New', () {}),
-          NewProductsWidget(),
         ],
       ),
     );
