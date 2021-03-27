@@ -22,8 +22,12 @@ class _HomePageState extends State<HomePage> {
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 20),
         children: [
-          // all category names and images
-          CategoryList(),
+          // all categories
+          CategoryListWidget(),
+          SizedBox(height: 30),
+          
+          // most bought products
+          SectionTitleWidget('Most Bought', () {}),
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:ecom_app/utils/button_styles.dart';
 import 'package:flutter/material.dart';
 
 class SectionTitleWidget extends StatelessWidget {
@@ -12,21 +13,18 @@ class SectionTitleWidget extends StatelessWidget {
     String otherLetters = _title.substring(1, _title.length);
 
     return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 15,
-        vertical: 5,
-      ),
-      color: Colors.grey.shade100,
+      padding: EdgeInsets.symmetric(horizontal: 15),
+      //color: Colors.grey.shade100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               Text(
-                firstLetter.toUpperCase(),
+                firstLetter,
                 style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline6.
-                  fontSize + 8,
+                  fontSize + 5,
                   fontWeight: Theme.of(context).textTheme.headline6.
                   fontWeight,
                   color: Theme.of(context).primaryColor,
@@ -34,19 +32,18 @@ class SectionTitleWidget extends StatelessWidget {
               ),
               Container(
                 child: Text(
-                  otherLetters.toUpperCase(),
+                  otherLetters,
                   style: Theme.of(context).textTheme.headline6,
                 ),
               ),
             ],
           ),
           TextButton(
-            child: Text('View All'),
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all(Colors.grey.
-              shade200),
-              elevation: MaterialStateProperty.all(1),
+            child: Text(
+              'View All',
+              style: TextStyle(color: Colors.black),
             ),
+            style: textButtonStyle,
             onPressed: _viewAll,
           ),
         ],

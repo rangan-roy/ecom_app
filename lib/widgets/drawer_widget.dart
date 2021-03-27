@@ -1,3 +1,4 @@
+import 'package:ecom_app/utils/button_styles.dart';
 import 'package:flutter/material.dart';
 
 class DrawerWidget extends StatefulWidget {
@@ -87,15 +88,11 @@ class _DrawerWidgetState extends State<DrawerWidget> {
               margin: EdgeInsets.only(top: 20),
               padding: EdgeInsets.symmetric(horizontal: 20),
               child: TextButton(
-                child: Text('Log Out'),
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                      side: BorderSide(color: Theme.of(context).primaryColor),
-                    ),
-                  ),
+                child: Text(
+                  'Log Out',
+                  style: TextStyle(color: Colors.black),
                 ),
+                style: textButtonStyle,
                 onPressed: () {},
               ),
             ),

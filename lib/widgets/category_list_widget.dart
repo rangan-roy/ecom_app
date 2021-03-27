@@ -1,7 +1,7 @@
 import 'package:ecom_app/widgets/category_item_widget.dart';
 import 'package:flutter/material.dart';
 
-class CategoryList extends StatelessWidget {
+class CategoryListWidget extends StatelessWidget {
   @override
   Row build(BuildContext context) {
     return Row(
