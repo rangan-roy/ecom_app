@@ -1,5 +1,6 @@
 import 'package:ecom_app/pages/home_page.dart';
 import 'package:ecom_app/pages/product_details.dart';
+import 'package:ecom_app/pages/product_image_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: ProductDetailsPage(),
+      initialRoute: ProductDetailsPage.routeName,
+      routes: {
+        HomePage.routeName: (_) => HomePage(),
+        ProductDetailsPage.routeName: (_) => ProductDetailsPage(),
+        ProductImagePage.routeName: (_) => ProductImagePage(),
+      },
     );
   }
 }

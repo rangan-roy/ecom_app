@@ -9,6 +9,8 @@ import 'package:ecom_app/widgets/top_rated_products_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  static final String routeName = 'home';
+
   @override
   _HomePageState createState() => _HomePageState();
 }
