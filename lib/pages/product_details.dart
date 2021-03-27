@@ -1,7 +1,7 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
-import 'package:ecom_app/pages/product_image_page.dart';
+import 'package:ecom_app/widgets/product_details_info_widget.dart';
+import 'package:ecom_app/widgets/product_images_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 
 class ProductDetailsPage extends StatefulWidget {
   static final String routeName = 'product_details';
@@ -15,28 +15,13 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar('Product Name', context, true),
-      body: CarouselSlider(
-        options: CarouselOptions(
-          height: 200,
-          enlargeCenterPage: true,
-        ),
-        items: [
-          InkWell(
-            onTap: () => Navigator.pushNamed(
-              context,
-              ProductImagePage.routeName,
-              arguments: 'images/t-shirt.jpg',
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                'images/t-shirt.jpg',
-                fit: BoxFit.cover,
-                width: double.maxFinite,
-                height: double.maxFinite,
-              ),
-            ),
-          ),
+      body: ListView(
+        children: [
+          ProductImagesWidget(),
+          
+          SizedBox(height: 30),
+
+          ProductDetailsInfoWidget(),
         ],
       ),
     );
