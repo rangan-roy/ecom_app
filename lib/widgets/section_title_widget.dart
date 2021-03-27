@@ -15,7 +15,7 @@ class SectionTitleWidget extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(4),
         border: Border.all(color: Colors.grey.shade100),
       ),
       margin: EdgeInsets.symmetric(

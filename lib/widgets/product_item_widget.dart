@@ -18,7 +18,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
           color: Colors.grey.shade100,
           width: 1,
         ),
-        borderRadius: BorderRadius.circular(5),
+        borderRadius: BorderRadius.circular(4),
       ),
       child: Row(
         children: [
@@ -33,8 +33,8 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(5),
-                  bottomLeft: Radius.circular(5),
+                  topLeft: Radius.circular(4),
+                  bottomLeft: Radius.circular(4),
                 ),
               ),
               Positioned(
@@ -42,8 +42,8 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(5),
-                      topLeft: Radius.circular(5),
+                      bottomRight: Radius.circular(4),
+                      topLeft: Radius.circular(4),
                     ),
                   ),
                   child: Text(
@@ -59,6 +59,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
             ],
           ),
 
+          // product info
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(10),
@@ -68,17 +69,15 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   // product present and past price
                   Row(
                     children: [
-                      Text(
-                        'BDT 1,690',
-                        style: Theme.of(context).textTheme.subtitle2,
-                      ),
+                      Text('BDT 1,690'),
+                      
                       SizedBox(width: 10),
+                      
                       Text(
                         'BDT 2,690',
                         style: TextStyle(
                           decoration: TextDecoration.lineThrough,
                           color: Colors.grey,
-                          fontSize: 12,
                         ),
                       ),
                     ],
@@ -89,7 +88,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   // product name
                   Text(
                     'Naviforce Men\'s Watch Watch Watch',
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: TextStyle(fontSize: 18),
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -97,13 +96,24 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   SizedBox(height: 10),
                   
                   // product rating
-                  Text(
-                    'Rating: 4.5',
-                    style: TextStyle(
-                      color: Theme.of(context).primaryColor,
-                    ),
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
+                  Row(
+                    children: [
+                      Text(
+                        'Rating: ',
+                        style: TextStyle(fontSize: 15),  
+                      ),
+                      Text(
+                        '4.5',
+                        style: TextStyle(
+                          color: Theme.of(context).primaryColor,
+                          fontSize: 15,
+                        ),
+                      ),
+                      Text(
+                        ' | 100 Reviews',
+                        style: TextStyle(fontSize: 15),
+                      ),
+                    ],
                   ),
                 ],
               ),

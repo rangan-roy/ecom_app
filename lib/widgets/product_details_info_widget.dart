@@ -57,12 +57,24 @@ class _ProductDetailsInfoWidgetState extends State<ProductDetailsInfoWidget> {
 
           SizedBox(height: 10),
 
-          Text(
-            'Rating: 4.5',
-            style: TextStyle(
-              color: Theme.of(context).primaryColor,
-              fontSize: 15,
-            ),  
+          Row(
+            children: [
+              Text(
+                'Rating: ',
+                style: TextStyle(fontSize: 15),  
+              ),
+              Text(
+                '4.5',
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontSize: 15,
+                ),
+              ),
+              Text(
+                ' | 100 Reviews',
+                style: TextStyle(fontSize: 15),
+              ),
+            ],
           ),
         ],
       ),
