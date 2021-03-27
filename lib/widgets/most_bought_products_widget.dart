@@ -1,9 +1,16 @@
-import 'package:ecom_app/widgets/product_list_widget.dart';
+import 'package:ecom_app/widgets/product_item_widget.dart';
 import 'package:flutter/material.dart';
 
 class MostBoughtProductsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return ProductListWidget();
+    return Column(
+      children: [
+        ProductItemWidget(),
+        ProductItemWidget(),
+        ProductItemWidget(),
+        ProductItemWidget(),
+      ],
+    );
   }
 }

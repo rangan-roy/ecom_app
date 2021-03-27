@@ -12,6 +12,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
     return SafeArea(
       child: Drawer(
         child: ListView(
+          padding: EdgeInsets.only(bottom: 20),
           children: [
             // user's name and image
             Container(

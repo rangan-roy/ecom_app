@@ -13,8 +13,19 @@ class SectionTitleWidget extends StatelessWidget {
     String otherLetters = _title.substring(1, _title.length);
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15),
-      //color: Colors.grey.shade100,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(5),
+        border: Border.all(color: Colors.grey.shade100),
+      ),
+      margin: EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 20,
+      ),
+      padding: EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 2,
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -24,9 +35,8 @@ class SectionTitleWidget extends StatelessWidget {
                 firstLetter,
                 style: TextStyle(
                   fontSize: Theme.of(context).textTheme.headline6.
-                  fontSize + 5,
-                  fontWeight: Theme.of(context).textTheme.headline6.
-                  fontWeight,
+                  fontSize + 7,
+                  fontWeight: FontWeight.w300,
                   color: Theme.of(context).primaryColor,
                 ),
               ),

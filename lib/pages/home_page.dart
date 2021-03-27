@@ -28,6 +28,19 @@ class _HomePageState extends State<HomePage> {
           
           // most bought products
           SectionTitleWidget('Most Bought', () {}),
+          MostBoughtProductsWidget(),
+
+          // top rated products
+          SectionTitleWidget('Top Rated', () {}),
+          TopRatedProductsWidget(),
+
+          // new products
+          SectionTitleWidget('New Products', () {}),
+          NewProductsWidget(),
+
+          // hot deals
+          SectionTitleWidget('Hot Deals', () {}),
+          HotDealsWidget(),
         ],
       ),
     );
