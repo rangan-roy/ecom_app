@@ -1,4 +1,5 @@
 import 'package:ecom_app/pages/home_page.dart';
+import 'package:ecom_app/pages/product_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: HomePage(),
+      home: ProductDetailsPage(),
     );
   }
 }
