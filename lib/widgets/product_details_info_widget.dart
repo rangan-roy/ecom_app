@@ -23,7 +23,7 @@ class _ProductDetailsInfoWidgetState extends State<ProductDetailsInfoWidget> {
           ),
           SizedBox(height: 10),
 
-          // product's past & present prices & discount percentege
+          // product's past & present prices & discount percentage
           Row(
             children: [
               ProductPricesWidget(400, 500, 16),

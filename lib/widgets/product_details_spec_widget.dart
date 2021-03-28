@@ -13,55 +13,62 @@ class ProductDetailsSpecWidget extends StatelessWidget {
             'Product Specifications',
             style: Theme.of(context).textTheme.headline6,
           ),
-
           SizedBox(height: 15),
 
           // product specs
-          Table(
-            border: TableBorder.all(color: Colors.grey.shade100),
-            children: [
-              // product brand
-              TableRow(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Brand'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('M & H'),
-                  ),
-                ],
+          Container(
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.grey.shade100),
+              borderRadius: BorderRadius.circular(3),
+            ),
+            child: Table(
+              border: TableBorder.symmetric(
+                inside: BorderSide(color: Colors.grey.shade100),
               ),
+              children: [
+                // product brand
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Brand'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('M & H'),
+                    ),
+                  ],
+                ),
 
-              // product color
-              TableRow(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Color'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Red'),
-                  ),
-                ],
-              ),
+                // product color
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Color'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Red'),
+                    ),
+                  ],
+                ),
 
-              // product warranty
-              TableRow(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('Warranty'),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text('No Warranty'),
-                  ),
-                ],
-              ),
-            ],
+                // product warranty
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('Warranty'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text('No Warranty'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
