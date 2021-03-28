@@ -17,9 +17,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: buildAppBar('Shop Name', context, true),
       body: ListView(
-        padding: EdgeInsets.only(bottom: 20),
+        padding: EdgeInsets.only(bottom: 60),
         children: [
           // product images
           ProductImagesWidget(),
@@ -38,8 +39,21 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           SizedBox(height: 20),
 
           // product reviews
-          ProductDetailsReviewsWidget()
+          ProductDetailsReviewsWidget(),
         ],
+      ),
+      floatingActionButton: Container(
+        margin: EdgeInsets.symmetric(horizontal: 15),
+        width: double.maxFinite,
+        child: TextButton(
+          child: Text('Add to Cart'),
+          onPressed: () {},
+        ),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(color: Colors.grey.shade100),
+          borderRadius: BorderRadius.circular(4),
+        ),
       ),
     );
   }
