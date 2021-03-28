@@ -1,6 +1,7 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
 import 'package:ecom_app/widgets/product_details_description_widget.dart';
 import 'package:ecom_app/widgets/product_details_info_widget.dart';
+import 'package:ecom_app/widgets/product_details_reviews_widget.dart';
 import 'package:ecom_app/widgets/product_details_spec_widget.dart';
 import 'package:ecom_app/widgets/product_images_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
     return Scaffold(
       appBar: buildAppBar('Shop Name', context, true),
       body: ListView(
+        padding: EdgeInsets.only(bottom: 20),
         children: [
           // product images
           ProductImagesWidget(),
@@ -33,6 +35,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
 
           // product description
           ProductDetailsDescriptionWidget(),
+          SizedBox(height: 20),
+
+          // product reviews
+          ProductDetailsReviewsWidget()
         ],
       ),
     );
