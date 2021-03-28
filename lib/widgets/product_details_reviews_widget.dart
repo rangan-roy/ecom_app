@@ -13,7 +13,7 @@ class ProductDetailsReviewsWidget extends StatelessWidget {
               // product reviews title
               Text(
                 'Product Reviews',
-                style: Theme.of(context).textTheme.headline6,
+                style: TextStyle(fontSize: 19),
               ),
               
               // add review button
@@ -61,7 +61,7 @@ class ProductDetailsReviewsWidget extends StatelessWidget {
                 // product reviewer
                 Text(
                   'Reviewed by Rangan Roy',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
 
@@ -108,7 +108,7 @@ class ProductDetailsReviewsWidget extends StatelessWidget {
                 // product reviewer
                 Text(
                   'Reviewed by Rangan Roy',
-                  style: TextStyle(fontSize: 15),
+                  style: TextStyle(fontWeight: FontWeight.w500),
                 ),
                 SizedBox(height: 10),
 

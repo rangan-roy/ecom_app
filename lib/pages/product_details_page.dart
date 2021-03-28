@@ -46,7 +46,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
         margin: EdgeInsets.symmetric(horizontal: 15),
         width: double.maxFinite,
         child: TextButton(
-          child: Text('Add to Cart'),
+          child: Text(
+            'Add to Cart',
+            style: TextStyle(fontSize: 16),
+          ),
           onPressed: () {},
         ),
         decoration: BoxDecoration(

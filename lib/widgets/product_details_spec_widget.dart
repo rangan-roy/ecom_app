@@ -11,7 +11,7 @@ class ProductDetailsSpecWidget extends StatelessWidget {
           // product spec title
           Text(
             'Product Specifications',
-            style: Theme.of(context).textTheme.headline6,
+            style: TextStyle(fontSize: 19),
           ),
           SizedBox(height: 15),
 

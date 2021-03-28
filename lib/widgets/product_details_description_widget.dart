@@ -11,7 +11,7 @@ class ProductDetailsDescriptionWidget extends StatelessWidget {
           // product description title
           Text(
             'Product Description',
-            style: Theme.of(context).textTheme.headline6,
+            style: TextStyle(fontSize: 19),
           ),
           SizedBox(height: 15),
 
