@@ -1,5 +1,6 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
 import 'package:ecom_app/widgets/product_details_info_widget.dart';
+import 'package:ecom_app/widgets/product_details_spec_widget.dart';
 import 'package:ecom_app/widgets/product_images_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +18,20 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
       appBar: buildAppBar('Product Name', context, true),
       body: ListView(
         children: [
+          // product images
           ProductImagesWidget(),
+          SizedBox(height: 30),
           
+          // product info
+          ProductDetailsInfoWidget(),
+          SizedBox(height: 30),
+          
+          // product specs
+          ProductDetailsSpecWidget(),
           SizedBox(height: 30),
 
-          ProductDetailsInfoWidget(),
+          // product description
+          
         ],
       ),
     );

@@ -1,3 +1,5 @@
+import 'package:ecom_app/widgets/product_prices_widget.dart';
+import 'package:ecom_app/widgets/product_rating_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductItemWidget extends StatefulWidget {
@@ -67,22 +69,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // product present and past price
-                  Row(
-                    children: [
-                      Text('BDT 1,690'),
-                      
-                      SizedBox(width: 10),
-                      
-                      Text(
-                        'BDT 2,690',
-                        style: TextStyle(
-                          decoration: TextDecoration.lineThrough,
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ],
-                  ),
-
+                  ProductPricesWidget(400, 500, 14),
                   SizedBox(height: 10),
 
                   // product name
@@ -92,29 +79,10 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
-
                   SizedBox(height: 10),
                   
                   // product rating
-                  Row(
-                    children: [
-                      Text(
-                        'Rating: ',
-                        style: TextStyle(fontSize: 15),  
-                      ),
-                      Text(
-                        '4.5',
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontSize: 15,
-                        ),
-                      ),
-                      Text(
-                        ' | 100 Reviews',
-                        style: TextStyle(fontSize: 15),
-                      ),
-                    ],
-                  ),
+                  ProductRatingWidget(),
                 ],
               ),
             ),

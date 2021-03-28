@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: HomePage.routeName,
+      initialRoute: ProductDetailsPage.routeName,
       routes: {
         HomePage.routeName: (_) => HomePage(),
         ProductDetailsPage.routeName: (_) => ProductDetailsPage(),

@@ -1,3 +1,5 @@
+import 'package:ecom_app/widgets/product_prices_widget.dart';
+import 'package:ecom_app/widgets/product_rating_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsInfoWidget extends StatefulWidget {
@@ -14,33 +16,18 @@ class _ProductDetailsInfoWidgetState extends State<ProductDetailsInfoWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // product name
           Text(
             'ADATA OTG Micro Reader',
             style: Theme.of(context).textTheme.headline6,
           ),
-
           SizedBox(height: 10),
-          
+
+          // product's past & present prices & discount percentege
           Row(
             children: [
-              Text(
-                'BDT 415',
-                style: Theme.of(context).textTheme.subtitle1,
-              ),
-              
+              ProductPricesWidget(400, 500, 16),
               SizedBox(width: 10),
-              
-              Text(
-                'BDT 550',
-                style: TextStyle(
-                  decoration: TextDecoration.lineThrough,
-                  color: Colors.grey,
-                  fontSize: 16,
-                ),
-              ),
-
-              SizedBox(width: 10),
-
               Container(
                 padding: EdgeInsets.symmetric(
                   horizontal: 5,
@@ -54,28 +41,10 @@ class _ProductDetailsInfoWidgetState extends State<ProductDetailsInfoWidget> {
               ),
             ],
           ),
-
           SizedBox(height: 10),
-
-          Row(
-            children: [
-              Text(
-                'Rating: ',
-                style: TextStyle(fontSize: 15),  
-              ),
-              Text(
-                '4.5',
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontSize: 15,
-                ),
-              ),
-              Text(
-                ' | 100 Reviews',
-                style: TextStyle(fontSize: 15),
-              ),
-            ],
-          ),
+          
+          // product rating
+          ProductRatingWidget(),
         ],
       ),
     );
