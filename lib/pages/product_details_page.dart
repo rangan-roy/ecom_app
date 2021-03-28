@@ -16,7 +16,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar('Product Name', context, true),
+      appBar: buildAppBar('Shop Name', context, true),
       body: ListView(
         children: [
           // product images

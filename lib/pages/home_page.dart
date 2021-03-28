@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar('E-commerce', context, false),
+      appBar: buildAppBar('Shop Name', context, false),
       drawer: DrawerWidget(),
       body: ListView(
         padding: EdgeInsets.symmetric(vertical: 20),
