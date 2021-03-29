@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-final textButtonStyle = ButtonStyle(
+final ButtonStyle textButtonStyle = ButtonStyle(
   backgroundColor: MaterialStateProperty.all(Colors.grey.shade200),
   elevation: MaterialStateProperty.all(1),
 );

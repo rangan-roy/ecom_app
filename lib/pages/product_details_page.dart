@@ -18,7 +18,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      appBar: buildAppBar('Shop Name', context, true),
+      appBar: buildAppBar('Product Name', context, true),
       body: ListView(
         padding: EdgeInsets.only(bottom: 60),
         children: [

@@ -1,4 +1,4 @@
-import 'package:ecom_app/utils/button_styles.dart';
+import 'package:ecom_app/utils/button_styles_util.dart';
 import 'package:flutter/material.dart';
 
 class SectionTitleWidget extends StatelessWidget {
