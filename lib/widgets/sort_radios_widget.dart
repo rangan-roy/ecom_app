@@ -1,4 +1,3 @@
-import 'package:ecom_app/utils/sort_options_util.dart';
 import 'package:flutter/material.dart';
 
 class SortRadiosWidget extends StatelessWidget {
@@ -6,10 +5,23 @@ class SortRadiosWidget extends StatelessWidget {
 
   SortRadiosWidget(this._sortOptionIndex);
 
-  final int _sortOptionsCount = sortOptions.length;
-  final List<Row> _sortRadios = [];
+  @override
+  Widget build(BuildContext context) {
+    final List<String> sortOptions = [
+      'Product New to Old',
+      'Product Old to New',
+      'Name A to Z',
+      'Name Z to A',
+      'Price Low to High',
+      'Price High to Low',
+      'Discount Low to High',
+      'Discount high to Low',
+      'Rating Low to High',
+      'Rating High to Low',
+    ];
+    final int _sortOptionsCount = sortOptions.length;
+    final List<Row> _sortRadios = [];
 
-  void _setSortButtons(BuildContext context) {
     for(var i = 0; i < _sortOptionsCount; i++) {
       _sortRadios.add(
         Row(
@@ -25,11 +37,6 @@ class SortRadiosWidget extends StatelessWidget {
         )
       );
     }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    _setSortButtons(context);
 
     return Card(
       child: Padding(

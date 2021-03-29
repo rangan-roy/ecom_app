@@ -44,11 +44,14 @@ class _CategoryPageState extends State<CategoryPage> {
   }
 
   void _sortButtonFunction() async {
-    _sortOptionIndex = await showDialog(
+    // showDialog() can return null if user doesn't select any radio button and 
+    // hits the back button 
+    int value = await showDialog(
       context: context,
       builder: (_) => SortRadiosWidget(_sortOptionIndex),
     );
-    setState(() {});
+
+    if(value != null) setState(() => _sortOptionIndex = value);
   }
 
   TextButton getFilterButton() {
