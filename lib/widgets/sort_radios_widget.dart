@@ -1,3 +1,4 @@
+import 'package:ecom_app/widgets/title_with_column_widget.dart';
 import 'package:flutter/material.dart';
 
 class SortRadiosWidget extends StatelessWidget {
@@ -5,8 +6,22 @@ class SortRadiosWidget extends StatelessWidget {
 
   SortRadiosWidget(this._sortOptionIndex);
 
+  final List<Row> _sortRadios = [];
+
   @override
   Widget build(BuildContext context) {
+    // inititalize _sortRadios variable
+    initSortRadios(context);
+
+    return Card(
+      child: SingleChildScrollView(
+        padding: EdgeInsets.all(15),
+        child: TitleWithColumnWidget('Sort Options', _sortRadios),
+      ),
+    );
+  }
+
+  void initSortRadios(BuildContext context) {
     final List<String> sortOptions = [
       'Product New to Old',
       'Product Old to New',
@@ -21,17 +36,16 @@ class SortRadiosWidget extends StatelessWidget {
       'Bought Low to High',
       'Bought High to Low',
     ];
-    final int _sortOptionsCount = sortOptions.length;
-    final List<Row> _sortRadios = [];
+    final int sortOptionsCount = sortOptions.length;
 
-    for(var i = 0; i < _sortOptionsCount; i++) {
+    for(var i = 0; i < sortOptionsCount; i++) {
       _sortRadios.add(
         Row(
           children: [
             Radio(
               groupValue: _sortOptionIndex,
               value: i,
-              onChanged: (int value) => Navigator.pop(context, value),
+              onChanged: (int value) => Navigator.of(context).pop(value),
             ),
             SizedBox(width: 10),
             Text(sortOptions[i]),
@@ -39,19 +53,5 @@ class SortRadiosWidget extends StatelessWidget {
         )
       );
     }
-
-    return Card(
-      child: ListView(
-        padding: EdgeInsets.all(15),
-        children: [
-          Text(
-            'Sort Options',
-            style: Theme.of(context).textTheme.headline6,
-          ),
-          Divider(),
-          Column(children: _sortRadios),
-        ],
-      ),
-    );
   }
 }

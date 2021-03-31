@@ -1,4 +1,5 @@
 import 'package:ecom_app/models/filter_info_model.dart';
+import 'package:ecom_app/widgets/title_with_column_widget.dart';
 import 'package:flutter/material.dart';
 
 class FilterCheckboxesWidget extends StatefulWidget {
@@ -20,6 +21,7 @@ class _FilterCheckboxesWidgetState extends State<FilterCheckboxesWidget> {
     final List<CheckboxListTile> _brandCheckboxes = [];
     final List<CheckboxListTile> _colorCheckboxes = [];
 
+    // initialize checkboxes variables
     initCheckboxes(_brandCheckboxes, widget._brandFilterInfoModels);
     initCheckboxes(_colorCheckboxes, widget._colorFilterInfoModels);
 
@@ -28,21 +30,12 @@ class _FilterCheckboxesWidgetState extends State<FilterCheckboxesWidget> {
         padding: EdgeInsets.all(15),
         children: [
           // brand checkboxes
-          Text(
-            'Brands',
-            style: Theme.of(context).textTheme.headline6,  
-          ),
-          Divider(),
-          Column(children: _brandCheckboxes),
+          TitleWithColumnWidget('Brands', _brandCheckboxes),
           SizedBox(height: 10),
 
           // color checkboxes
-          Text(
-            'Colors',
-            style: Theme.of(context).textTheme.headline6,  
-          ),
-          Divider(),
-          Column(children: _colorCheckboxes),
+          TitleWithColumnWidget('Colors', _colorCheckboxes),
+          SizedBox(height: 10),
         ],
       ),
     );
@@ -57,6 +50,7 @@ class _FilterCheckboxesWidgetState extends State<FilterCheckboxesWidget> {
         CheckboxListTile(
           value: filterInfoModels[i].isChecked,
           title: Text(filterInfoModels[i].name),
+          controlAffinity: ListTileControlAffinity.leading,
           onChanged: (bool value) => setState(() {
             filterInfoModels[i].isChecked = value;
           }),
