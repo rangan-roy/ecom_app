@@ -18,6 +18,8 @@ class SortRadiosWidget extends StatelessWidget {
       'Discount high to Low',
       'Rating Low to High',
       'Rating High to Low',
+      'Bought Low to High',
+      'Bought High to Low',
     ];
     final int _sortOptionsCount = sortOptions.length;
     final List<Row> _sortRadios = [];
@@ -39,18 +41,16 @@ class SortRadiosWidget extends StatelessWidget {
     }
 
     return Card(
-      child: Padding(
+      child: ListView(
         padding: EdgeInsets.all(15),
-        child: ListView(
-          children: [
-            Text(
-              'Sort Options',
-              style: Theme.of(context).textTheme.headline6,
-            ),
-            Divider(),
-            Column(children: _sortRadios),
-          ],
-        ),
+        children: [
+          Text(
+            'Sort Options',
+            style: Theme.of(context).textTheme.headline6,
+          ),
+          Divider(),
+          Column(children: _sortRadios),
+        ],
       ),
     );
   }

@@ -1,4 +1,7 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
+import 'package:ecom_app/models/filter_info_model.dart';
+import 'package:ecom_app/widgets/filter_button_widget.dart';
+import 'package:ecom_app/widgets/filter_checkboxes_widget.dart';
 import 'package:ecom_app/widgets/product_item_widget.dart';
 import 'package:ecom_app/widgets/sort_button_widget.dart';
 import 'package:ecom_app/widgets/sort_radios_widget.dart';
@@ -12,8 +15,21 @@ class CategoryPage extends StatefulWidget {
 }
 
 class _CategoryPageState extends State<CategoryPage> {
+  // sorting required variables
   int _sortOptionIndex = 0;
-  
+
+  // filtering required variables
+    List<FilterInfoModel> _brandFilterInfoModels = [
+    FilterInfoModel('Easy', 120),
+    FilterInfoModel('Lotto', 180),
+  ];
+  List<FilterInfoModel> _colorFilterInfoModels = [
+    FilterInfoModel('Red', 100),
+    FilterInfoModel('Green', 200),
+  ];
+  List<int> _priceRange = [0, 1000000000]; // range in taka
+  List<int> _warrantyRange = [0, 100]; // range in months
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,8 +43,17 @@ class _CategoryPageState extends State<CategoryPage> {
               // sort button
               SortButtonWidget(_sortButtonFunction),
               // filter button
-              getFilterButton()
+              FilterButtonWidget(_filteButtonFunction),
             ],
+          ),
+
+          CheckboxListTile(
+            value: true,
+            title: Text('Hello, world!'),
+            controlAffinity: ListTileControlAffinity.leading,
+            onChanged: (bool value) {
+              print(value);
+            },
           ),
 
           // product items
@@ -54,22 +79,12 @@ class _CategoryPageState extends State<CategoryPage> {
     if(value != null) setState(() => _sortOptionIndex = value);
   }
 
-  TextButton getFilterButton() {
-    return TextButton(
-      style: ButtonStyle(
-        foregroundColor: MaterialStateProperty.all(Colors.black),
-      ),
-      child: Row(
-        children: [
-          Text(
-            'Filter',
-            style: TextStyle(fontSize: 16),
-          ),
-          SizedBox(width: 5),
-          Icon(Icons.filter),
-        ],
-      ),
-      onPressed: () {},
+  void _filteButtonFunction() async {
+    await showDialog(
+      context: context,
+      builder: (_) => FilterCheckboxesWidget(_brandFilterInfoModels, 
+        _colorFilterInfoModels, _priceRange, _warrantyRange),
     );
+    setState(() {});
   }
 }
