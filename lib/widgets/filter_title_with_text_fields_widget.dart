@@ -1,3 +1,4 @@
+import 'package:ecom_app/widgets/filter_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class FilterTitleWithTextFields extends StatelessWidget {
@@ -24,35 +25,17 @@ class FilterTitleWithTextFields extends StatelessWidget {
           children: [
             // min textfiled
             Text('Min = '),
-            getTextField(_minController, 0),
+            FilterTextField(_minController, _range, 0),
 
             // deifference between two fields
             SizedBox(width: 10),
 
             // max textfiled
             Text('Max = '),
-            getTextField(_maxController, 1),
+            FilterTextField(_maxController, _range, 1),
           ],
         ),
       ],
-    );
-  }
-
-  SizedBox getTextField(TextEditingController controller, int rangeIndex) {
-    return SizedBox(
-      width: 120,
-      child: TextField(
-        keyboardType: TextInputType.number,
-        controller: controller,
-        onChanged: (String value) {
-          try {
-            _range[rangeIndex] = double.parse(value).round();
-          } catch(error) {
-            print(error);
-          }
-        },
-        decoration: InputDecoration(border: OutlineInputBorder()),
-      ),
     );
   }
 }

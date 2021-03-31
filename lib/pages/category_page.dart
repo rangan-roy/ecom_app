@@ -47,15 +47,6 @@ class _CategoryPageState extends State<CategoryPage> {
             ],
           ),
 
-          CheckboxListTile(
-            value: true,
-            title: Text('Hello, world!'),
-            controlAffinity: ListTileControlAffinity.leading,
-            onChanged: (bool value) {
-              print(value);
-            },
-          ),
-
           // product items
           ProductItemWidget(),
           ProductItemWidget(),
