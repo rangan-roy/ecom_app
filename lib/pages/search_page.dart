@@ -1,3 +1,4 @@
+import 'package:ecom_app/widgets/search_page_widgets/search_result_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends SearchDelegate<String> {
@@ -21,7 +22,9 @@ class SearchPage extends SearchDelegate<String> {
 
   @override
   Widget buildResults(BuildContext context) {
-    return Text(query);
+    if(query.isEmpty) {
+      return SizedBox();
+    } else return SearchResultWidget(query);
   }
 
   @override

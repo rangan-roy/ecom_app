@@ -19,7 +19,7 @@ class _CategoryPageState extends State<CategoryPage> {
   int _sortOptionIndex = 0;
 
   // filtering required variables
-    List<FilterInfoModel> _brandFilterInfoModels = [
+  List<FilterInfoModel> _brandFilterInfoModels = [
     FilterInfoModel('Easy', 120),
     FilterInfoModel('Lotto', 180),
   ];
@@ -28,7 +28,7 @@ class _CategoryPageState extends State<CategoryPage> {
     FilterInfoModel('Green', 200),
   ];
   List<int> _priceRange = [0, 1000000000]; // range in taka
-  List<int> _warrantyRange = [0, 100]; // range in months
+  List<int> _warrantyRange = [0, 100]; // range in month
 
   @override
   Widget build(BuildContext context) {
@@ -64,7 +64,7 @@ class _CategoryPageState extends State<CategoryPage> {
     // hits the back button 
     int value = await showDialog(
       context: context,
-      builder: (_) => SortPage(_sortOptionIndex),
+      builder: (BuildContext context) => SortPage(_sortOptionIndex),
     );
 
     if(value != null) setState(() => _sortOptionIndex = value);
@@ -73,7 +73,7 @@ class _CategoryPageState extends State<CategoryPage> {
   void _filteButtonFunction() async {
     await showDialog(
       context: context,
-      builder: (_) => FilterPage(_brandFilterInfoModels, 
+      builder: (BuildContext context) => FilterPage(_brandFilterInfoModels, 
         _colorFilterInfoModels, _priceRange, _warrantyRange),
     );
     setState(() {});

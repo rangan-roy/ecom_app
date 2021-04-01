@@ -74,7 +74,8 @@ class _FilterPageState extends State<FilterPage> {
       checkboxes.add(
         CheckboxListTile(
           value: filterInfoModels[i].isChecked,
-          title: Text(filterInfoModels[i].name),
+          title: Text('${filterInfoModels[i].name} (${filterInfoModels[i].count
+            } Products)'),
           controlAffinity: ListTileControlAffinity.leading,
           onChanged: (bool value) => setState(() {
             filterInfoModels[i].isChecked = value;
