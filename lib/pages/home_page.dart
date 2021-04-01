@@ -1,11 +1,11 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
-import 'package:ecom_app/widgets/category_list_widget.dart';
-import 'package:ecom_app/widgets/drawer_widget.dart';
-import 'package:ecom_app/widgets/most_bought_products_widget.dart';
-import 'package:ecom_app/widgets/hot_deals_widget.dart';
-import 'package:ecom_app/widgets/new_products_widget.dart';
-import 'package:ecom_app/widgets/section_title_widget.dart';
-import 'package:ecom_app/widgets/top_rated_products_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/category_list_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/drawer_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/most_bought_products_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/new_products_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/section_title_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/top_rated_products_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {

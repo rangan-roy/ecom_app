@@ -1,4 +1,4 @@
-import 'package:ecom_app/widgets/filter_text_field_widget.dart';
+import 'package:ecom_app/widgets/filter_page_widgets/filter_text_field_widget.dart';
 import 'package:flutter/material.dart';
 
 class FilterTitleWithTextFields extends StatelessWidget {

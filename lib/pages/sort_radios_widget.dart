@@ -1,4 +1,4 @@
-import 'package:ecom_app/widgets/title_with_column_widget.dart';
+import 'package:ecom_app/widgets/filter_page_widgets/title_with_column_widget.dart';
 import 'package:flutter/material.dart';
 
 class SortRadiosWidget extends StatelessWidget {

@@ -15,6 +15,8 @@ class FilterTextField extends StatelessWidget {
         keyboardType: TextInputType.number,
         controller: _controller,
         onChanged: (String value) {
+          if(value.isEmpty) value = '0';
+
           try {
             _range[_rangeIndex] = double.parse(value).round();
           } catch(error) {

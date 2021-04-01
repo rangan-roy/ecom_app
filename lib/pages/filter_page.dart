@@ -1,22 +1,22 @@
 import 'package:ecom_app/models/filter_info_model.dart';
-import 'package:ecom_app/widgets/filter_title_with_text_fields_widget.dart';
-import 'package:ecom_app/widgets/title_with_column_widget.dart';
+import 'package:ecom_app/widgets/filter_page_widgets/filter_title_with_text_fields_widget.dart';
+import 'package:ecom_app/widgets/filter_page_widgets/title_with_column_widget.dart';
 import 'package:flutter/material.dart';
 
-class FilterCheckboxesWidget extends StatefulWidget {
+class FilterPage extends StatefulWidget {
   final List<FilterInfoModel> _brandFilterInfoModels;
   final List<FilterInfoModel> _colorFilterInfoModels;
   final List<int> _priceRange;
   final List<int> _warrantyRange;
 
-  FilterCheckboxesWidget(this._brandFilterInfoModels, 
+  FilterPage(this._brandFilterInfoModels, 
     this._colorFilterInfoModels, this._priceRange, this._warrantyRange);
 
   @override
-  _FilterCheckboxesWidgetState createState() => _FilterCheckboxesWidgetState();
+  _FilterPageState createState() => _FilterPageState();
 }
 
-class _FilterCheckboxesWidgetState extends State<FilterCheckboxesWidget> {
+class _FilterPageState extends State<FilterPage> {
   @override
   Widget build(BuildContext context) {
     final List<CheckboxListTile> _brandCheckboxes = [];

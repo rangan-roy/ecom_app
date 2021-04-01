@@ -1,10 +1,10 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
 import 'package:ecom_app/models/filter_info_model.dart';
-import 'package:ecom_app/widgets/filter_button_widget.dart';
-import 'package:ecom_app/widgets/filter_checkboxes_widget.dart';
-import 'package:ecom_app/widgets/product_item_widget.dart';
-import 'package:ecom_app/widgets/sort_button_widget.dart';
-import 'package:ecom_app/widgets/sort_radios_widget.dart';
+import 'package:ecom_app/widgets/category_page_widgets/filter_button_widget.dart';
+import 'package:ecom_app/pages/filter_page.dart';
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget.dart';
+import 'package:ecom_app/widgets/category_page_widgets/sort_button_widget.dart';
+import 'package:ecom_app/pages/sort_page.dart';
 import 'package:flutter/material.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -64,7 +64,7 @@ class _CategoryPageState extends State<CategoryPage> {
     // hits the back button 
     int value = await showDialog(
       context: context,
-      builder: (_) => SortRadiosWidget(_sortOptionIndex),
+      builder: (_) => SortPage(_sortOptionIndex),
     );
 
     if(value != null) setState(() => _sortOptionIndex = value);
@@ -73,7 +73,7 @@ class _CategoryPageState extends State<CategoryPage> {
   void _filteButtonFunction() async {
     await showDialog(
       context: context,
-      builder: (_) => FilterCheckboxesWidget(_brandFilterInfoModels, 
+      builder: (_) => FilterPage(_brandFilterInfoModels, 
         _colorFilterInfoModels, _priceRange, _warrantyRange),
     );
     setState(() {});

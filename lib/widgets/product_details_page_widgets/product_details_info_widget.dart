@@ -1,5 +1,5 @@
-import 'package:ecom_app/widgets/product_prices_widget.dart';
-import 'package:ecom_app/widgets/product_rating_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_prices_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_rating_widget.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetailsInfoWidget extends StatefulWidget {
