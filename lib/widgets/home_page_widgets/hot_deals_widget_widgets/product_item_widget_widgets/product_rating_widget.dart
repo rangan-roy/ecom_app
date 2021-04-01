@@ -11,10 +11,7 @@ class ProductRatingWidget extends StatelessWidget {
         ),
         Text(
           '4.5',
-          style: TextStyle(
-            color: Theme.of(context).primaryColor,
-            fontSize: 15,
-          ),
+          style: TextStyle(fontSize: 15),
         ),
         Text(
           ' | 100 Reviews',

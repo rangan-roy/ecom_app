@@ -19,7 +19,10 @@ class _ProductDetailsInfoWidgetState extends State<ProductDetailsInfoWidget> {
           // product name
           Text(
             'ADATA OTG Micro Reader',
-            style: Theme.of(context).textTheme.headline6,
+            style: TextStyle(
+              fontSize: 20,
+              color: Theme.of(context).primaryColor,
+            ),
           ),
           SizedBox(height: 10),
 

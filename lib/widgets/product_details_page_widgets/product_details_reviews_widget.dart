@@ -21,6 +21,7 @@ class ProductDetailsReviewsWidget extends StatelessWidget {
                 icon: Icon(
                   Icons.add_circle,
                   size: 30,
+                  color: Theme.of(context).primaryColor,
                 ),
                 onPressed: () {},
               ),
@@ -61,7 +62,10 @@ class ProductDetailsReviewsWidget extends StatelessWidget {
                 // product reviewer
                 Text(
                   'Reviewed by Rangan Roy',
-                  style: TextStyle(fontWeight: FontWeight.w500),
+                  style: TextStyle(
+                    fontWeight: FontWeight.w500,
+                    fontSize: 15,
+                  ),
                 ),
                 SizedBox(height: 10),
 

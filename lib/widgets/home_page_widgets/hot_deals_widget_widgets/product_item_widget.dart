@@ -1,3 +1,5 @@
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_image_with_discount_widget.dart';
+import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_item_name_widget.dart';
 import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_prices_widget.dart';
 import 'package:ecom_app/widgets/home_page_widgets/hot_deals_widget_widgets/product_item_widget_widgets/product_rating_widget.dart';
 import 'package:flutter/material.dart';
@@ -25,41 +27,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
       child: Row(
         children: [
           // product image and discount percentege
-          Stack(
-            children: [
-              ClipRRect(
-                child: Image.asset(
-                  'images/user_profile_cover.jpg',
-                  width: 150,
-                  height: 150,
-                  fit: BoxFit.cover,
-                ),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(4),
-                  bottomLeft: Radius.circular(4),
-                ),
-              ),
-              Positioned(
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(4),
-                      topLeft: Radius.circular(4),
-                    ),
-                  ),
-                  child: Text(
-                    '-20%',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 7,
-                    vertical: 3,
-                  ),
-                ),
-              ),
-            ],
-          ),
+          ProductImageWithDiscountWidget(),
 
           // product info
           Expanded(
@@ -73,12 +41,7 @@ class _ProductItemWidgetState extends State<ProductItemWidget> {
                   SizedBox(height: 10),
 
                   // product name
-                  Text(
-                    'Naviforce Men\'s Watch Watch Watch',
-                    style: TextStyle(fontSize: 18),
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                  ),
+                  ProductItemNameWidget(),
                   SizedBox(height: 10),
                   
                   // product rating
