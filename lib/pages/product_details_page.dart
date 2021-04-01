@@ -1,4 +1,5 @@
 import 'package:ecom_app/builders/app_bar_builder.dart';
+import 'package:ecom_app/widgets/product_details_page_widgets/add_to_cart_button_widget.dart';
 import 'package:ecom_app/widgets/product_details_page_widgets/product_details_description_widget.dart';
 import 'package:ecom_app/widgets/product_details_page_widgets/product_details_info_widget.dart';
 import 'package:ecom_app/widgets/product_details_page_widgets/product_details_reviews_widget.dart';
@@ -42,22 +43,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
           ProductDetailsReviewsWidget(),
         ],
       ),
-      floatingActionButton: Container(
-        margin: EdgeInsets.symmetric(horizontal: 15),
-        width: double.maxFinite,
-        child: TextButton(
-          child: Text(
-            'Add to Cart',
-            style: TextStyle(fontSize: 16),
-          ),
-          onPressed: () {},
-        ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          border: Border.all(color: Colors.grey.shade100),
-          borderRadius: BorderRadius.circular(4),
-        ),
-      ),
+      floatingActionButton: AddToCartButtonWidget(),
     );
   }
 }

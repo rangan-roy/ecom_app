@@ -9,9 +9,7 @@ class ProductImagePage extends StatelessWidget {
     final String _productImage = ModalRoute.of(context).settings.arguments;
 
     return PhotoView(
-      backgroundDecoration: BoxDecoration(
-        color: Colors.white,
-      ),
+      backgroundDecoration: BoxDecoration(color: Colors.white),
       imageProvider: AssetImage(_productImage),
     );
   }
