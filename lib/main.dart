@@ -1,7 +1,7 @@
-import 'package:ecom_app/pages/category_page.dart';
-import 'package:ecom_app/pages/home_page.dart';
-import 'package:ecom_app/pages/product_details_page.dart';
-import 'package:ecom_app/pages/product_image_page.dart';
+import 'package:ecom_app/pages/category.dart';
+import 'package:ecom_app/pages/home.dart';
+import 'package:ecom_app/pages/product_details.dart';
+import 'package:ecom_app/pages/product_image.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,12 +23,12 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      initialRoute: ProductDetailsPage.routeName,
+      initialRoute: ProductDetails.routeName,
       routes: {
-        HomePage.routeName: (_) => HomePage(),
-        ProductDetailsPage.routeName: (_) => ProductDetailsPage(),
-        ProductImagePage.routeName: (_) => ProductImagePage(),
-        CategoryPage.routeName: (_) => CategoryPage(),
+        Home.routeName: (_) => Home(),
+        ProductDetails.routeName: (_) => ProductDetails(),
+        ProductImage.routeName: (_) => ProductImage(),
+        Category.routeName: (_) => Category(),
       },
     );
   }

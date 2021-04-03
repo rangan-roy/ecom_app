@@ -1,4 +1,4 @@
-import 'package:ecom_app/pages/search_page.dart';
+import 'package:ecom_app/pages/search.dart';
 import 'package:flutter/material.dart';
 
 AppBar buildAppBar(String title, BuildContext context, bool hasBackButton) {
@@ -9,10 +9,10 @@ AppBar buildAppBar(String title, BuildContext context, bool hasBackButton) {
       title,
       style: TextStyle(color: Theme.of(context).primaryColor),
     ),
-    leading: IconButton(
+    leading: hasBackButton ? IconButton(
       icon: Icon(Icons.arrow_back),
       onPressed: () => Navigator.of(context).pop(),
-    ),
+    ) : null,
     actions: [
       // search button
       IconButton(
@@ -20,7 +20,7 @@ AppBar buildAppBar(String title, BuildContext context, bool hasBackButton) {
         onPressed: () {
           showSearch(
             context: context,
-            delegate: SearchPage(),
+            delegate: Search(),
           );
         },
       ),
