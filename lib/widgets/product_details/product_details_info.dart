@@ -1,4 +1,3 @@
-import 'package:ecom_app/widgets/home/hot_deals/product_item/product_info/product_rating.dart';
 import 'package:ecom_app/widgets/product_details/product_details_info/product_info_prices.dart';
 import 'package:ecom_app/widgets/product_details/product_details_info/product_info_title.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +24,7 @@ class _ProductDetailsInfoState extends State<ProductDetailsInfo> {
           SizedBox(height: 10),
           
           // product rating
-          ProductRating(),
+          Text('Rating: 4.5 | 100 Reviews'),
         ],
       ),
     );

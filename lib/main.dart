@@ -1,3 +1,4 @@
+import 'package:ecom_app/pages/cart.dart';
 import 'package:ecom_app/pages/category.dart';
 import 'package:ecom_app/pages/home.dart';
 import 'package:ecom_app/pages/product_details.dart';
@@ -22,13 +23,18 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.w400,
           ),
         ),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          elevation: 0,
+        ),
       ),
-      initialRoute: Home.routeName,
+      initialRoute: Cart.routeName,
       routes: {
-        Home.routeName: (_) => Home(),
-        ProductDetails.routeName: (_) => ProductDetails(),
-        ProductImage.routeName: (_) => ProductImage(),
-        Category.routeName: (_) => Category(),
+        Home.routeName: (BuildContext context) => Home(),
+        ProductDetails.routeName: (BuildContext context) => ProductDetails(),
+        ProductImage.routeName: (BuildContext context) => ProductImage(),
+        Category.routeName: (BuildContext context) => Category(),
+        Cart.routeName: (BuildContext context) => Cart(),
       },
     );
   }
