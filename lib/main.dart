@@ -1,5 +1,6 @@
 import 'package:ecom_app/pages/cart.dart';
 import 'package:ecom_app/pages/category.dart';
+import 'package:ecom_app/pages/checkout.dart';
 import 'package:ecom_app/pages/home.dart';
 import 'package:ecom_app/pages/product_details.dart';
 import 'package:ecom_app/pages/product_image.dart';
@@ -28,13 +29,14 @@ class MyApp extends StatelessWidget {
           elevation: 0,
         ),
       ),
-      initialRoute: Cart.routeName,
+      initialRoute: Checkout.routeName,
       routes: {
         Home.routeName: (BuildContext context) => Home(),
         ProductDetails.routeName: (BuildContext context) => ProductDetails(),
         ProductImage.routeName: (BuildContext context) => ProductImage(),
         Category.routeName: (BuildContext context) => Category(),
         Cart.routeName: (BuildContext context) => Cart(),
+        Checkout.routeName:(BuildContext context) => Checkout(),
       },
     );
   }
