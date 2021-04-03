@@ -26,16 +26,51 @@ AppBar buildAppBar(String title, BuildContext context, bool hasBackButton) {
       ),
 
       // notification button
-      IconButton(
-        icon: Icon(Icons.notifications),
-        onPressed: () {},
+      Stack(
+        children: [
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () {},
+          ),
+          if(true) buildNumber(100, context),
+        ],
       ),
 
       // cart button
-      IconButton(
-        icon: Icon(Icons.shopping_cart),
-        onPressed: () {},
+      Stack(
+        children: [
+          IconButton(
+            icon: Icon(Icons.shopping_cart),
+            onPressed: () {},
+          ),
+          if(true) buildNumber(100, context),
+        ],
       ),
     ],
+  );
+}
+
+Positioned buildNumber(int number, BuildContext context) {
+  return Positioned(
+    top: 1,
+    child: Container(
+      width: 25,
+      height: 15,
+      padding: EdgeInsets.symmetric(horizontal: 2),
+      alignment: Alignment.center,
+      decoration: BoxDecoration(
+        color: Theme.of(context).errorColor,
+        borderRadius: BorderRadius.circular(3),
+        //shape: BoxShape.circle,
+      ),
+      child: Text(
+        number.toString(),
+        overflow: TextOverflow.ellipsis,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: 10,
+        ),
+      ),
+    ),
   );
 }
